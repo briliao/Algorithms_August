@@ -23,6 +23,9 @@
 
             //Given array, index, and additional value, insert the value into array at given index. You can think of PushFront(arr,val) as equivalent to InsertAt(arr,0,val).
             function insertAt(arr, index, value){
+                for (var i = arr.length; i >= index; i--){
+                    arr[i] = arr[i - 1];
+                }
                 arr[index] = value;
                 return arr;
             }
